@@ -5,7 +5,7 @@ from routes.art import art_bp
 app = Flask(__name__)
 
 app.register_blueprint(weather_bp, url_prefix="/api/weather")
-app.register_blueprint(art_bp, url_prefix="/api/inspiration")
+app.register_blueprint(art_bp, url_prefix="/art")
 
 @app.route('/')
 def home():
