@@ -1,82 +1,88 @@
-.panel-weather {
-  background: #f8f9fa;
-  border-radius: 12px;
-  padding: 20px;
-  width: 320px;
+body {
+  margin: 0;
   font-family: Arial, sans-serif;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  background: #f4f4f4;
 }
-
-.panel-weather header h2 {
-  margin-top: 0;
-  font-size: 1.4rem;
-  color: #333;
+.row-3{
+  display:flex;
+  flex-wrap:nowrap;     
+  gap:16px;
+  padding:0 16px;
+  align-items:flex-start;
 }
-
+.panel {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px;
+  flex: 1;                  
+  min-width: 0;             
+}
+.panel-slideshow {
+  flex: 1.2;
+}
 #weatherForm {
   display: flex;
-  gap: 10px;
-  margin-bottom: 15px;
+  gap: 8px;
+  margin-bottom: 10px;
 }
 
-#weatherForm input, #weatherForm select, #weatherForm button {
+#weatherForm input,
+#weatherForm select,
+#weatherForm button {
   padding: 6px;
-  border-radius: 6px;
   border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.slideshow {
+  position: relative;
+  aspect-ratio: 16/9;
+  background: #ccc;
+  border-radius: 6px;
+  overflow: hidden;
 }
 
-#weatherNow {
-  font-size: 1.1rem;
-  margin-bottom: 8px;
+.slideshow img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-#extremes {
-  color: #444;
-  font-weight: bold;
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
 }
-.panel-news {
-  background: #fff;
-  border-radius: 12px;
-  padding: 20px;
-  width: 400px;
-  font-family: Arial, sans-serif;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
+.prev { left: 8px; }
+.next { right: 8px; }
 
-.panel-news header h2 {
-  margin-top: 0;
-  font-size: 1.4rem;
-  color: #222;
-}
-
+/* News section */
 .news-item {
-  margin-bottom: 16px;
-  border-bottom: 1px solid #eee;
-  padding-bottom: 12px;
+  border-top: 1px solid #eee;
+  padding: 8px 0;
 }
-
-.news-item:last-child {
-  border-bottom: none;
+.news-item:first-child {
+  border-top: none;
 }
-
 .news-item h3 {
-  font-size: 1.1rem;
-  margin: 0 0 6px;
-  color: #0077cc;
+  margin: 0 0 4px;
+  font-size: 1rem;
 }
-
 .news-item p {
-  margin: 0 0 6px;
-  color: #444;
+  margin: 0 0 4px;
   font-size: 0.9rem;
+  color: #555;
 }
-
 .news-item a {
-  color: #0077cc;
-  text-decoration: none;
   font-size: 0.85rem;
+  color: #0066cc;
+  text-decoration: none;
 }
-
 .news-item a:hover {
   text-decoration: underline;
 }
