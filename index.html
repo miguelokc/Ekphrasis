@@ -7,12 +7,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<p>Hello User</p>
-
-<main class = "row-3">
-
-    <section class = "panel-weather">
+<div class="dashboard">
+    <section class = "panel panel-weather">
         <header>
             <h2>Weather</h2>
         </header>
@@ -35,21 +31,6 @@
         </div>
     </section>
 
-    <section class = "panel-slideshow">
-
-        <header class = "slideshow-header">
-            <h2 id = "s-title">Gallery</h2>
-            <div class ="dots" id = "dots" aria-hidden="true"></div>
-        </header>
-          <div class="slideshow" role="region" aria-label="Image slideshow">
-        <button class="nav prev" id="prev" aria-label="Previous slide">‹</button>
-        <img id="slide" alt="Slideshow image" />
-        <button class="nav next" id="next" aria-label="Next slide">›</button>
-      </div>
-
-    </section>
-
-</section>
     <section class = "panel news">
         <header class = "news-header">
             <h2>Top Headlines</h2>
@@ -71,8 +52,25 @@
              <a href="#">Read More</a>    
         </article>
     </section>
-    
-</main>
+</div>
+      <section class = "panel panel-slideshow">
+
+        <header class = "slideshow-header">
+            <h2 id = "s-title">Gallery</h2>
+            <div class ="dots" id = "dots" aria-hidden="true"></div>
+        </header>
+          <div class="slideshow" role="region" aria-label="Image slideshow">
+        <button class="nav prev" id="prev" aria-label="Previous slide">‹</button>
+        <img id="slide" alt="Slideshow image" />
+        <button class="nav next" id="next" aria-label="Next slide">›</button>
+      </div>
+
+    </section>
+
+    <div class="quote">
+    <p>"Success is the sum of small efforts, repeated day in and day out." - Robert Collier</p>
+    </div>
+
 <script src="main.js"></script>
 </body>
 </html>
