@@ -22,7 +22,7 @@ def get_weather(city):
     api_key = os.getenv("WEATHER_API_KEY")
     if not api_key:
         return jsonify({"error": "API key not found"}), 500
-
+    #Returns units for front end in imperial
     url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&units=imperial"
     try:
         res = requests.get(url)
