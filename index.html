@@ -7,26 +7,36 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <p>Hello User</p>
-<main class = "grid">
+
+<main class = "row-3">
 
     <section class = "panel-weather">
         <header>
             <h2>Weather</h2>
         </header>
+
         <form id="weatherForm">
             <input id="cityInput" placeholder = "Enter City (e.g., Houston)"/>
             <select id="unitSelect">
-                <option value="Imperical"selected>F</option>
+                <option value="imperial"selected>F</option>
                 <option value="metric">C</option>
             </select>
             <button type = "submit"> Get Weather</button>
         </form>
 
-        <div id="weatherNow">Weather info will appear here</div>
-        <div id="extremes"></div>
+       <div id="weatherNow">
+            <strong>Houston, US</strong><br>
+            🌤 75°F, scattered clouds
+        </div>
+        <div id="extremes">
+            Today: High 80°F, Low 62°F
+        </div>
     </section>
+
     <section class = "panel-slideshow">
+
         <header class = "slideshow-header">
             <h2 id = "s-title">Gallery</h2>
             <div class ="dots" id = "dots" aria-hidden="true"></div>
@@ -36,15 +46,8 @@
         <img id="slide" alt="Slideshow image" />
         <button class="nav next" id="next" aria-label="Next slide">›</button>
       </div>
-      
+
     </section>
-    <div id="weatherNow">
-        <strong>Houston, US</strong><br>
-        🌤 75°F, scattered clouds
-    </div>
-    <div id="extremes">
-        Today: High 80°F, Low 62°F
-    </div>
 
 </section>
     <section class = "panel news">
