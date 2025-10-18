@@ -9,7 +9,41 @@
 <body>
 <p>Hello User</p>
 <main class = "container">
-    <section class = "header"></section>
+
+    <section class = "panel-weather">
+        <header>
+            <h2>Weather</h2>
+        </header>
+        <form id="weatherForm">
+            <input id="cityInput" placeholder = "Enter City (e.g., Houston)"/>
+            <select id="unitSelect">
+                <option value="Imperical"selected>F</option>
+                <option value="metric">C</option>
+            </select>
+            <button type = "submit"> Get Weather</button>
+        </form>
+
+        <div id="weatherNow">Weather info will appear here</div>
+        <div id="extremes"></div>
+    </section>
+
+    <div id="weatherNow">
+        <strong>Houston, US</strong><br>
+        🌤 75°F, scattered clouds
+    </div>
+    <div id="extremes">
+        Today: High 80°F, Low 62°F
+    </div>
+
+</section>
+    <section class = "panel news">
+        <header class = "news-header">
+            <h2>Top Headlines</h2>
+            <select id="newsSource"></select>
+        </header>
+        <ul class="news-List" id="newsList"></ul>
+    </section>
+    
 </main>
 <script src="main.js"></script>
 </body>
