@@ -45,4 +45,4 @@ def get_art(query):
     if art_info:
         return jsonify(art_info)
     else:
-        return jsonify({"erorr": "No suitable artwork has been found."}), 404
+        return jsonify({"error": "No suitable artwork has been found."}), 404
