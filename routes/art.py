@@ -15,7 +15,7 @@ def fetch_art_data(query):
         if not object_ids:
             return None
 
-        for oid in object_ids[:1000]:  # try first 10 to increase chances
+        for oid in object_ids[:1000]:  # try first 1000 to increase chances
             obj_url = f"https://collectionapi.metmuseum.org/public/collection/v1/objects/{oid}"
             obj_res = requests.get(obj_url)
             obj_res.raise_for_status()
