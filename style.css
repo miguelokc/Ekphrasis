@@ -9,12 +9,10 @@ html, body {
 
 body {
   display: grid;
-  grid-template-columns: minmax(320px, 420px) 1fr;
+  grid-template-columns: minmax(300px, 360px) .8fr minmax(280px, 360px);
   column-gap: 24px;
   row-gap: 0;
   align-items: start;
-  
- 
 }
 
 .dashboard {
@@ -36,6 +34,10 @@ body {
   height: 600px;   /* pick a height you like */
   aspect-ratio: auto; /* optional: disables the automatic ratio */
   
+}
+.panel-slideshow {
+  max-width: 900px;   /* or whatever looks good */
+  margin: 0 auto;     /* keeps it centered */
 }
 .panel-weather,
 .news{
@@ -121,6 +123,7 @@ body {
   margin-top: 8px;     /* adjust this value to bring it closer */
   text-align: center;          
   font-size: 1.4rem;
+  max-height: 725px;
   font-style: italic;
   background: #ffffff;         
   border-top: 1px solid #ddd;  
@@ -141,4 +144,45 @@ body {
   margin: 0;
   font-size: 1.5rem;
   color: #111827;
+}
+
+.dashboard       { grid-column: 1; }
+.panel-slideshow { grid-column: 2; }
+.quote           { grid-column: 3; }
+
+.panel-quote.quote {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;   /* left-align everything */
+  justify-content: flex-start;
+  text-align: left;
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+  line-height: 1.6;          /* add breathing room between lines */
+}
+
+.panel-quote.quote h2 {
+  margin: 0 0 4px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #111827;
+}
+
+.panel-quote.quote h3 {
+  margin: 0 0 16px;
+  font-size: 1rem;
+  font-weight: normal;
+  color: #6b7280;
+}
+
+.panel-quote.quote p {
+  margin: 0;
+  font-size: 1.05rem;
+  font-style: italic;
+  line-height: 1.45;
+  color: #374151;
+  white-space: pre-line; /* preserves line breaks without forcing <br> everywhere */
 }
